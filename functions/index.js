@@ -16,3 +16,12 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+
+const functions = require("firebase-functions")
+
+exports.helloWorld = functions.https.onRequest((request, response) => {
+console.log("Hello");
+response.send("Hello world")
+}
+)
